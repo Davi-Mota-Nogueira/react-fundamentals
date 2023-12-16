@@ -1,0 +1,57 @@
+<html>
+    <body>
+        <div id="app"></div>
+        <div id="app2"></div>
+        <script type="text/javascript">
+            // First need to select element div by its id
+            const app = document.getElementById("app");
+
+            // Create a header text
+            const header = document.createElement('h1');
+
+            // Create some content for h1 element
+            const text = 'Developing html page with DOM';
+            const headerContent = document.createTextNode(text);
+
+            // Append text to header
+            header.appendChild(headerContent)
+
+            // Now you put the complete h1 element into html div
+            app.appendChild(header)
+        </script>
+        <!-- React uses JSX to declare the content, and needs Babel package to work-->
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/jsx">
+            const app2 = document.getElementById("app2");
+
+            function Header(props){
+                const title = props.title;
+                return <h1>{title ? title : 'Hello World'}</h1>;
+            }
+
+            function HomePage(){
+                const names = ['Lily Castro', 'Deanna Holland', 'Aron Navarro'];
+                const [likes,setLikes] = React.useState(0);
+
+                function handleClick(){
+                    likes += 1;
+                    console.log(likes);
+                }
+
+                return (<div>
+                    <Header title="Develop. Create. Ship.🚀" />
+                    <ul>
+                        {names.map((name)=>(
+                            <li key={name}>{name}</li>
+                        ))}
+                    </ul>
+                    <button onClick={handleClick}>Like</button>
+                </div>);
+            }
+
+            ReactDOM.render(<HomePage/>, app2);
+        </script>
+    </body>
+</html>
