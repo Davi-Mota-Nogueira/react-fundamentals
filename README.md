@@ -44,3 +44,13 @@ React has a set of functions called **Hooks**, and it can add logic to the *comp
 Using 'React.useState()' returns an array with two items:
 - First one is the **State** *value*; (value)
 - Second one is a funtion to *update* the *value*. (setValue)
+
+## After the Core Concepts
+
+### Turning index.html to index.js or index.jsx
+After downloading node and npm, you install via npm the following packages:
+- react
+- react-dom
+- next
+Then you takeout the part in index.html that uses babel and html tags not inside JavaScript functions,
+and thus transforming the file from html to js.
