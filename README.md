@@ -45,7 +45,7 @@ Using 'React.useState()' returns an array with two items:
 - First one is the **State** *value*; (value)
 - Second one is a funtion to *update* the *value*. (setValue)
 
-## After the Core Concepts
+## After the Core Concepts (HTML --> React)
 
 ### Turning index.html to index.js or index.jsx
 After downloading node and npm, you install via npm the following packages:
@@ -54,3 +54,7 @@ After downloading node and npm, you install via npm the following packages:
 - next
 Then you takeout the part in index.html that uses babel and html tags not inside JavaScript functions,
 and thus transforming the file from html to js.
+
+## Server and Client Components (React --> Next.js)
+In recent Next.js, there are two **Enviroments**, the Client and Server.
+Between them there a **Network Boundary**, determining their space, capabilities and constraints.
